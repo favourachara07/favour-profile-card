@@ -5,7 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #e0f7fa; /* Light blue background */
+    background-color: #e0f7fa; 
     overflow: hidden;
 }
 
@@ -91,7 +91,7 @@ body {
     top: 10px;
     right: 10px;
     padding: 10px 20px;
-    background-color: #0073b1; /* Darker blue */
+    background-color: #0073b1; 
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -100,12 +100,11 @@ body {
 }
 
 .dark-mode-toggle:hover {
-    background-color: #005f8a; /* Even darker blue */
+    background-color: #005f8a; 
 }
 
-/* Dark mode styles */
 body.dark-mode {
-    background-color: #1e1e1e; /* Dark blue background */
+    background-color: #1e1e1e; 
     color: #ffffff;
 }
 
