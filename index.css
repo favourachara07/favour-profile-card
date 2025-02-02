@@ -1,61 +1,97 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #e0f7fa; /* Light blue background */
+    overflow: hidden;
 }
 
 .profile_container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    width: 300px;
+    width: 350px;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+}
+
+.profile_container:hover {
+    transform: scale(1.05);
 }
 
 .profile-picture {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 15px;
+    margin-bottom: 2px;
+    border: 3px solid #0073b1;
 }
 
 .name {
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: bold;
     margin: 10px 0;
+    color: #0073b1;
 }
 
 .job-title {
-    color: #777;
+    color: #555;
     margin: 10px 0;
+    font-style: italic;
 }
 
-.bio, .current_location, .email, .social_links, .current-time {
+.styled-hr {
+    border: 0;
+    height: 1px;
+    background: #0073b1;
+    margin: 2px 0;
+}
+
+.bio {
     margin: 10px 0;
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+    text-align: justify;
+    padding: 0 10px;
+}
+
+.current_location {
+    margin: 10px 0;
+    color: #0073b1;
+    font-weight: bold;
+}
+
+.email {
+    margin: 10px 0;
+    color: #0073b1;
+    font-weight: bold;
+    text-decoration: underline;
 }
 
 .social_links a {
-    margin: 0 5px;
+    margin: 0 10px;
     text-decoration: none;
     color: #0073b1;
+    font-size: 1.2em;
 }
 
 .social_links a:hover {
     text-decoration: underline;
 }
+
 .dark-mode-toggle {
     position: fixed;
     top: 10px;
     right: 10px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #0073b1; /* Darker blue */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -64,19 +100,48 @@ body {
 }
 
 .dark-mode-toggle:hover {
-    background-color: #555;
+    background-color: #005f8a; /* Even darker blue */
 }
 
 /* Dark mode styles */
 body.dark-mode {
-    background-color: #121212;
+    background-color: #1e1e1e; /* Dark blue background */
     color: #ffffff;
 }
 
 body.dark-mode .profile_container {
-    background-color: #1e1e1e;
+    background-color: #112833;
+    color: #fff;
 }
-
+body.dark-mode .bio {
+    color: #ffffff;
+}
 body.dark-mode a {
     color: #bb86fc;
+}
+@media (max-width: 600px) {
+    .profile_container {
+        padding: 20px;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 1.5em;
+    }
+
+    .job-title {
+        font-size: 1em;
+    }
+
+    .bio, .current_location, .email, .social_links, .current-time {
+        font-size: 0.9em;
+    }
+
+    .social_links a {
+        font-size: 1em;
+    }
 }
